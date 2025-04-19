@@ -36,6 +36,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 public class SaveShareImageActivity extends AppCompatActivity {
 
@@ -407,7 +408,7 @@ public class SaveShareImageActivity extends AppCompatActivity {
         }
     }
 
-    public void setLocationShare(String type){
+    public void setLocationShare(String mType){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View view = getLayoutInflater().inflate(R.layout.location_model,null);
         builder.setView(view);
@@ -419,13 +420,13 @@ public class SaveShareImageActivity extends AppCompatActivity {
         btnShareLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               if (type=="instagram"){
+               if (Objects.equals(mType, "instagram")){
                    goInstagram(edtLocaion.getText().toString());
-               }else if (type=="whatsapp"){
+               }else if (Objects.equals(mType, "whatsapp")){
                    goWhatsapp(edtLocaion.getText().toString());
-               }else if (type=="more"){
+               }else if (Objects.equals(mType, "more")){
                    goMore(edtLocaion.getText().toString());
-               }else if (type=="facebook"){
+               }else if (Objects.equals(mType, "facebook")){
                    initShareIntent(edtLocaion.getText().toString());
                }
             }

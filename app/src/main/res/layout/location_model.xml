@@ -23,7 +23,7 @@
             android:id="@+id/edtLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="رابط المنطقة من جوجل مابس"
+            android:hint="رابط المنطقة او المكان او ملاحظة (إختياري)"
             android:background="@drawable/design_edt"
             android:padding="20dp"
             android:inputType="text"

@@ -29,6 +29,7 @@ import android.graphics.Shader;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -3476,7 +3477,59 @@ public class PicEditor extends AppCompatActivity implements View.OnTouchListener
         return arrayList;
     }
 
+
     public void save() {
+        Bitmap saveDrawnBitmap = saveDrawnBitmap(this.editCardContainer);
+
+        // Check if the bitmap is valid
+        if (saveDrawnBitmap == null) {
+            Log.e("CF_IMAGE_ERROR", "Bitmap is null");
+            return;
+        }
+
+        // Use the public Pictures directory for accessibility
+        File directory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), getResources().getString(R.string.app_name));
+
+        // Ensure the directory exists
+        if (!directory.exists() && !directory.mkdirs()) {
+            Log.e("CF_IMAGE_ERROR", "Failed to create directory: " + directory.getAbsolutePath());
+            return;
+        }
+
+        // Define the file to save the image
+        File file2 = new File(directory, this.filename);
+
+        try {
+            // Save the bitmap as a PNG file
+            FileOutputStream fileOutputStream = new FileOutputStream(file2);
+            saveDrawnBitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            fileOutputStream.flush();
+            fileOutputStream.close();
+
+            Log.e("CF_IMAGE_SAVED", "Image saved at: " + file2.getAbsolutePath());
+
+            // Refresh the gallery to show the newly saved image
+            MediaScannerConnection.scanFile(this, new String[]{file2.getAbsolutePath()}, null, (path, uri) -> {
+                Log.e("CF_IMAGE_INFO", "Gallery refreshed for file: " + file2.getAbsolutePath());
+            });
+
+        } catch (Exception e) {
+            Log.e("CF_IMAGE_ERROR", "Error during image saving", e);
+        }
+
+        // Set the file path for sharing or other purposes
+        this.filePath = file2.getAbsolutePath();
+
+        // Pass the path to another activity for sharing
+        Intent intent2 = new Intent(this, SaveShareImageActivity.class);
+        intent2.putExtra("PATH", this.filePath);
+        startActivity(intent2);
+
+        finish();
+    }
+
+
+    public void saveOld() {
         Bitmap saveDrawnBitmap = saveDrawnBitmap(this.editCardContainer);
         String str = Environment.getExternalStorageDirectory().toString() + "/" + getResources().getString(R.string.app_name);
         File file = new File(str);
