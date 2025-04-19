@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:gravity="center_horizontal" android:height="25dp" android:width="25dp">
+        <bitmap android:src="@drawable/acc_rotate"/>
+    </item>
+    <item android:gravity="center_horizontal" android:height="12.5dp" android:width="1dp" android:top="18.5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="12.5dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <padding android:top="25dp"/>
+        </shape>
+    </item>
+    <item android:gravity="left" android:height="15dp" android:width="15dp">
+        <shape android:shape="oval">
+            <corners android:radius="2dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+            <solid android:width="1dp" android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item android:gravity="right" android:height="15dp" android:width="15dp">
+        <shape android:shape="oval">
+            <corners android:radius="2dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+            <solid android:width="1dp" android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item android:gravity="bottom|right|center_vertical|center_horizontal|center" android:height="15dp" android:width="15dp">
+        <shape android:shape="oval">
+            <corners android:radius="2dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+            <solid android:width="1dp" android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:height="15dp" android:width="15dp">
+        <shape android:shape="oval">
+            <corners android:radius="2dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+            <solid android:width="1dp" android:color="@android:color/white"/>
+            <padding android:left="5dp" android:top="5dp" android:right="5dp" android:bottom="5dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="100dp" android:width="100dp"/>
+            <corners android:radius="2dp" android:topRightRadius="0dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="0dp"/>
+            <stroke android:width="1dp" android:color="@android:color/white"/>
+            <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context=".activities.UserStep3">
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/header"/>
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/app_icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="التصميم مجاني او مدفوع؟ :"
+                    android:gravity="right"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/jannafont"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"/>
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_isfree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Aztec_Purple"
+                    android:gravity="center"
+                    app:spinner_item_array="@array/design_type"
+                    android:layout_gravity="center"
+                    android:minWidth="350dp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14.5sp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="@color/grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/Aztec_Purple"
+                    app:spinner_popup_elevation="14dp" />
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/design_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:minHeight="50dp"
+                android:layout_margin="10dp"
+                android:hint="السعر بدولار"
+                android:padding="10dp"
+                android:fontFamily="@font/jannafont"
+                android:inputType="number"
+                android:background="@drawable/design_edt"/>
+
+
+
+            <EditText
+                android:id="@+id/design_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:layout_margin="10dp"
+                android:hint="عنوان التصميم"
+                android:fontFamily="@font/jannafont"
+                android:padding="10dp"
+                android:background="@drawable/design_edt"/>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="فئة التصميم :"
+                    android:gravity="right"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/jannafont"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"/>
+
+                <com.skydoves.powerspinner.PowerSpinnerView
+                    android:id="@+id/sp_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Aztec_Purple"
+                    android:gravity="center"
+                    app:spinner_item_array="@array/design_category"
+                    android:layout_gravity="center"
+                    android:minWidth="350dp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14.5sp"
+                    app:spinner_arrow_gravity="end"
+                    app:spinner_arrow_padding="8dp"
+                    app:spinner_divider_color="@color/grey"
+                    app:spinner_divider_show="true"
+                    app:spinner_divider_size="0.4dp"
+                    app:spinner_popup_animation="dropdown"
+                    app:spinner_popup_background="@color/Aztec_Purple"
+                    app:spinner_popup_elevation="14dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_save_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حفظ"
+                android:fontFamily="@font/jannafont"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:background="@drawable/btn_shape_design"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/mProgress"
+        layout="@layout/progress_layout"
+        android:visibility="gone" />
+</FrameLayout>

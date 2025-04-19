@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <entry>
+        <key>firebase_remote_config
+        </key>
+        <value>{\n &quot;upgradeAppVersion&quot;: &quot;1&quot;,\n &quot;showInterstitialOnLaunch&quot;:
+            &quot;false&quot;,\n &quot;showInterstitialOnExit&quot;:&quot;false&quot;,\n &quot;showInterstitialAd&quot;:
+            &quot;false&quot;,\n &quot;InterstitialOnlyGoogle&quot;: &quot;false&quot;,\n &quot;InterstitialOnlyFB&quot;:
+            &quot;true&quot;,\n &quot;AdRotationPolicy&quot;: &quot;false&quot;,\n &quot;AdRotationPolicyNative&quot;:
+            &quot;false&quot;,\n &quot;showNativeAd&quot;: &quot;true&quot;,\n &quot;showNativeAdOnMainScreen&quot;:
+            &quot;true&quot;,\n &quot;NativeOnlyGoogle&quot;: &quot;false&quot;,\n &quot;NativeOnlyFB&quot;:
+            &quot;true&quot;,\n &quot;showOurAppInterstitials&quot;: &quot;false&quot;,\n &quot;OurApps&quot;:
+            &quot;false&quot;\n &quot;enableIAPflag&quot; : &quot;false&quot;\n }
+        </value>
+    </entry>
+</defaultsMap>

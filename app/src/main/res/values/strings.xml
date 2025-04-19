@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Cards Maker</string>
+
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="cancel">إلغاء</string>
+    <string name="ok">نعم</string>
+    <string name="permission_request">طلب الصلاحية</string>
+    <string name="permission_request_msg">هذا التطبيق يحتاج الى هذه الصلاحية حتى يعمل بدون مشاكل</string>
+
+    <string name="saved_image_message">تم تسجيل الصورة بنجاح</string>
+    <string name="update_button">تحديث</string>
+
+    <string name="file_provider_authority">com.jeddah.invitationcards.fileprovider</string>
+
+    <string name="hello">Hello</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_facebook_app">No Facebook app</string>
+    <string name="no_instagram_app">No Instagram App</string>
+    <string name="no_whatsapp_app">No Whatsup app</string>
+    <string name="recommand_message">Let me recommend you this application!</string>
+
+
+    <string name="privacy_url">https://www.google.com/</string>
+    <string name="register">تسجـيل</string>
+    <string name="login_email_hint">الإيميل</string>
+    <string name="login_password_hint">كلمة المرور</string>
+    <string name="signup_login_hint">اضغط هنا لتسجيل الدخول</string>
+    <string name="login_signup_hint">إضغط هنا لفتح حساب</string>
+
+</resources>

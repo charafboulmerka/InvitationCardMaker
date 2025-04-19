@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ProfileActivity"
+    android:background="@color/profileBackground">
+    <include
+        android:id="@+id/mProgress"
+        layout="@layout/progress_layout"
+        android:visibility="gone" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/profilePrimaryDark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/TransparentText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout"
+                android:background="@drawable/profile_bk">
+
+                <com.github.abdularis.civ.AvatarImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:highlightEnable="false"
+                    app:strokeColor="#64B5F6"
+                    app:strokeWidth="1dp"
+                    app:avatarBackgroundColor="#8E24AA"
+                    app:text=""
+                    app:textSize="29sp"/>
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="28dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="developer@appsnipp.com"
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/profileBackground">
+
+                    <View
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/profile_bk"/>
+
+                    <TextView
+                        android:id="@+id/profile_btn_home"
+                        style="@style/profileStyledBackButton"
+                        android:gravity="center"
+                        android:text="العودة للصفحة للرئيسية" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.appsnipp.profiledesigns.ProfileActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                style="@style/headerText"
+                android:text="معلومات الحساب"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/col1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsTextMain"
+                        android:gravity="right"
+                        android:text="الإسم" />
+
+                    <TextView
+                        android:id="@+id/profile_user_name"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsMiniText"
+                        android:gravity="right"
+                        android:text="" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/nameImageView"
+                    android:layout_height="@dimen/profile_icons"
+                    android:layout_width="@dimen/profile_icons"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_name" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/col2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsTextMain"
+                        android:gravity="right"
+                        android:text="الإيميل" />
+
+                    <TextView
+                        android:id="@+id/profile_user_email"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsMiniText"
+                        android:gravity="right"
+                        android:text="" />
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:layout_height="@dimen/profile_icons"
+                    android:layout_width="@dimen/profile_icons"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_email" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/col3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsTextMain"
+                        android:gravity="right"
+                        android:text="عدد المشاريع" />
+
+                    <TextView
+                        android:id="@+id/profile_user_projects"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsMiniText"
+                        android:gravity="right"
+                        android:text="0 مشروع" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_height="@dimen/profile_icons"
+                    android:layout_width="@dimen/profile_icons"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mobile" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/col4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsTextMain"
+                        android:gravity="right"
+                        android:text="الأرباح" />
+
+                    <TextView
+                        android:id="@+id/profile_user_profits"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        style="@style/profileDetailsMiniText"
+                        android:gravity="right"
+                        android:text="0$" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_height="@dimen/profile_icons"
+                    android:layout_width="@dimen/profile_icons"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_dob" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

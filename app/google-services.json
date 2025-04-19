@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "903725716611",
+    "firebase_url": "https://invitation-cards-f2bff-default-rtdb.firebaseio.com",
+    "project_id": "invitation-cards-f2bff",
+    "storage_bucket": "invitation-cards-f2bff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903725716611:android:0c78f5b17131ff51daf7b6",
+        "android_client_info": {
+          "package_name": "com.jeddah.invitationcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903725716611-arll56kb3v96av8e79k3o9nerrfcslma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkPazMUHkotGDD2xhVau2rS-pupctxN1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903725716611-arll56kb3v96av8e79k3o9nerrfcslma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

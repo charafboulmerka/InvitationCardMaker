@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+        maven { url = uri("https://maven.aliyun.com/repository/public") } // Better than jcenter proxy
+        maven { url =uri("https://maven.aliyun.com/repository/jcenter") }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT) // ✅ or FAIL_ON_PROJECT_REPOS if needed
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url =uri("https://maven.aliyun.com/repository/jcenter") }
+    }
+}
+
+rootProject.name = "Invitation Card Maker"
+include ':app'
